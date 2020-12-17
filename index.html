@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles.css">
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+
+    </head>
+    <body>
+        <h1>Place to visit</h1>
+        
+        <div class="content">
+            <form id="add-cafe-form">
+                <input type="text" name="name" placeholder="Place name">
+                <input type="text" name="city" placeholder="City name">
+                <button>Add place</button>
+            </form>
+            <ul id="cafe-list"></ul>
+        </div>
+
+        <script>
+            var config = {
+                apiKey: "AIzaSyALioB-IwFtAi8IiAmrvYxLY7RZ3ivb8Kg",
+                authDomain: "make-list-1631b.firebaseapp.com",
+                databaseURL: "https://make-list-1631b.firebaseio.com",
+                projectId: "make-list-1631b",
+                storageBucket: "make-list-1631b.appspot.com",
+                messagingSenderId: "961772676381",
+                appId: "1:961772676381:web:fa26d7b332b4937e39edf4",
+                measurementId: "G-DJP7KWK0EG"
+              };
+              firebase.initializeApp(config);
+              const db= firebase.firestore();
+              db.settings({timestampsInSnapshots:true})
+            </script>
+        <script src="/app.js"></script>
+    </body>
+</html>
